@@ -1,4 +1,4 @@
-export const arkhangelsk = {
+export const arkhangelskDistrict = {
     "type": "FeatureCollection",
     "features": [
         {
