@@ -25,7 +25,7 @@ const localBase = computed(() => {
 	return localJsonDatabase.map((item) => ({...item, indexValue: item.indexValue / maxIndexValue}))
 })
 
-const szfoDistricts = computed(() => {
+const allDistricts = computed(() => {
   return [
     arkhangelskDistrict,
     nenetsAutonomousDistrict
@@ -64,7 +64,7 @@ const getStyle = (e) => {
         name="Stadia Maps Basemap"
       />
       <l-geo-json
-        v-for="(district, index) in szfoDistricts"
+        v-for="(district, index) in allDistricts"
         :key="`district-${index}`"
         :visible="!needUpdate"
         :geojson="district"
