@@ -14,7 +14,10 @@ async function readJSONFile(file) {
         fileReader.readAsText(file);
     });
 }
-watch(localFile, async (value) => {fileJSON.value = await readJSONFile(value[0])})
+watch(localFile, async (value) => {
+	const response = await readJSONFile(value[0]);
+	fileJSON.value = response.data;
+	})
 </script>
 
 <template>
